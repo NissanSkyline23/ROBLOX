@@ -1,2 +1,812 @@
-# SCP-3008
-no thing to see here
+local Mod_Menu = Instance.new("ScreenGui")
+local TextGui = Instance.new("TextLabel")
+local Frame = Instance.new("Frame")
+local TextButton = Instance.new("TextButton")
+local TextButton2 = Instance.new("TextButton")
+local TextButton3 = Instance.new("TextButton")
+local TextButton5 = Instance.new("TextButton")
+local TextButton4 = Instance.new("TextButton")
+local TextButton6 = Instance.new("TextButton")
+local TextButton7 = Instance.new("TextButton")
+local TextButton8 = Instance.new("TextButton")
+local TextButton9 = Instance.new("TextButton")
+local TextButton10 = Instance.new("TextButton")
+local TextButton11 = Instance.new("TextButton")
+local TextButton12 = Instance.new("TextButton")
+local TextButton13 = Instance.new("TextButton")
+local TextButton14 = Instance.new("TextButton")
+local Hider = Instance.new("TextLabel")
+local EmployeeESP = Instance.new("TextButton")
+local ShowTime = Instance.new("TextLabel")
+local TextLabel = Instance.new("TextLabel")
+
+--Properties:
+
+Mod_Menu.Name = "Mod_Menu"
+Mod_Menu.Parent = game.CoreGui
+Mod_Menu.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+TextGui.Name = "TextGui"
+TextGui.Parent = Mod_Menu
+TextGui.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+TextGui.Position = UDim2.new(0.33547008, 0, 0.387096763, 0)
+TextGui.Size = UDim2.new(0, 307, 0, 35)
+TextGui.Font = Enum.Font.ArialBold
+TextGui.Text = "3008 ESP Mod Menu"
+TextGui.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextGui.TextSize = 34.000
+TextGui.TextWrapped = true
+
+Frame.Parent = TextGui
+Frame.BackgroundColor3 = Color3.fromRGB(171, 171, 171)
+Frame.Position = UDim2.new(0, 0, 1, 0)
+Frame.Size = UDim2.new(0, 307, 0, 145)
+
+TextButton.Parent = TextGui
+TextButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextButton.LayoutOrder = 1
+TextButton.Position = UDim2.new(0, 0, 1, 0)
+TextButton.Size = UDim2.new(0, 66, 0, 29)
+TextButton.Font = Enum.Font.Arial
+TextButton.Text = "GameCube"
+TextButton.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextButton.TextSize = 14.000
+
+TextButton2.Name = "TextButton2"
+TextButton2.Parent = TextGui
+TextButton2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextButton2.LayoutOrder = 1
+TextButton2.Position = UDim2.new(0.719869673, 0, 1, 0)
+TextButton2.Size = UDim2.new(0, 86, 0, 29)
+TextButton2.Font = Enum.Font.Arial
+TextButton2.Text = "ClearESP"
+TextButton2.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextButton2.TextSize = 14.000
+
+TextButton3.Name = "TextButton3"
+TextButton3.Parent = TextGui
+TextButton3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextButton3.LayoutOrder = 1
+TextButton3.Position = UDim2.new(-4.97028942e-08, 0, 1.82857144, 0)
+TextButton3.Size = UDim2.new(0, 66, 0, 29)
+TextButton3.Font = Enum.Font.Arial
+TextButton3.Text = "Pizza"
+TextButton3.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextButton3.TextSize = 14.000
+
+TextButton5.Name = "TextButton5"
+TextButton5.Parent = TextGui
+TextButton5.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextButton5.LayoutOrder = 1
+TextButton5.Position = UDim2.new(-4.97028942e-08, 0, 2.65714288, 0)
+TextButton5.Size = UDim2.new(0, 66, 0, 29)
+TextButton5.Font = Enum.Font.Arial
+TextButton5.Text = "MedKit"
+TextButton5.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextButton5.TextSize = 14.000
+
+TextButton4.Name = "TextButton4"
+TextButton4.Parent = TextGui
+TextButton4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextButton4.LayoutOrder = 1
+TextButton4.Position = UDim2.new(-4.97028942e-08, 0, 3.48571444, 0)
+TextButton4.Size = UDim2.new(0, 66, 0, 29)
+TextButton4.Font = Enum.Font.Arial
+TextButton4.Text = "MeatBalls"
+TextButton4.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextButton4.TextSize = 14.000
+
+TextButton6.Name = "TextButton6"
+TextButton6.Parent = TextGui
+TextButton6.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextButton6.LayoutOrder = 1
+TextButton6.Position = UDim2.new(-4.97028942e-08, 0, 4.31428576, 0)
+TextButton6.Size = UDim2.new(0, 66, 0, 29)
+TextButton6.Font = Enum.Font.Arial
+TextButton6.Text = "Apple"
+TextButton6.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextButton6.TextSize = 14.000
+
+TextButton7.Name = "TextButton7"
+TextButton7.Parent = TextGui
+TextButton7.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextButton7.LayoutOrder = 1
+TextButton7.Position = UDim2.new(0.214983657, 0, 1, 0)
+TextButton7.Size = UDim2.new(0, 66, 0, 29)
+TextButton7.Font = Enum.Font.Arial
+TextButton7.Text = "Lemon"
+TextButton7.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextButton7.TextSize = 14.000
+
+TextButton8.Name = "TextButton8"
+TextButton8.Parent = TextGui
+TextButton8.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextButton8.LayoutOrder = 1
+TextButton8.Position = UDim2.new(0.214983657, 0, 1.82857144, 0)
+TextButton8.Size = UDim2.new(0, 66, 0, 29)
+TextButton8.Font = Enum.Font.Arial
+TextButton8.Text = "Burger"
+TextButton8.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextButton8.TextSize = 14.000
+
+TextButton9.Name = "TextButton9"
+TextButton9.Parent = TextGui
+TextButton9.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextButton9.LayoutOrder = 1
+TextButton9.Position = UDim2.new(0.214983657, 0, 2.65714288, 0)
+TextButton9.Size = UDim2.new(0, 66, 0, 29)
+TextButton9.Font = Enum.Font.Arial
+TextButton9.Text = "Banana"
+TextButton9.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextButton9.TextSize = 14.000
+
+TextButton10.Name = "TextButton10"
+TextButton10.Parent = TextGui
+TextButton10.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextButton10.LayoutOrder = 1
+TextButton10.Position = UDim2.new(0.214983657, 0, 3.48571444, 0)
+TextButton10.Size = UDim2.new(0, 66, 0, 29)
+TextButton10.Font = Enum.Font.Arial
+TextButton10.Text = "HotDog"
+TextButton10.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextButton10.TextSize = 14.000
+
+TextButton11.Name = "TextButton11"
+TextButton11.Parent = TextGui
+TextButton11.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextButton11.LayoutOrder = 1
+TextButton11.Position = UDim2.new(0.214983657, 0, 4.31428576, 0)
+TextButton11.Size = UDim2.new(0, 66, 0, 29)
+TextButton11.Font = Enum.Font.Arial
+TextButton11.Text = "Dount"
+TextButton11.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextButton11.TextSize = 14.000
+
+TextButton12.Name = "TextButton12"
+TextButton12.Parent = TextGui
+TextButton12.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextButton12.LayoutOrder = 1
+TextButton12.Position = UDim2.new(0.429967374, 0, 1, 0)
+TextButton12.Size = UDim2.new(0, 66, 0, 29)
+TextButton12.Font = Enum.Font.Arial
+TextButton12.Text = "Chips"
+TextButton12.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextButton12.TextSize = 14.000
+
+TextButton13.Name = "TextButton13"
+TextButton13.Parent = TextGui
+TextButton13.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextButton13.LayoutOrder = 1
+TextButton13.Position = UDim2.new(0.429967374, 0, 1.82857144, 0)
+TextButton13.Size = UDim2.new(0, 66, 0, 29)
+TextButton13.Font = Enum.Font.Arial
+TextButton13.Text = "Ice Cream"
+TextButton13.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextButton13.TextSize = 14.000
+
+TextButton14.Name = "TextButton14"
+TextButton14.Parent = TextGui
+TextButton14.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextButton14.LayoutOrder = 1
+TextButton14.Position = UDim2.new(0.429967374, 0, 2.65714288, 0)
+TextButton14.Size = UDim2.new(0, 66, 0, 29)
+TextButton14.Font = Enum.Font.Arial
+TextButton14.Text = "Chocolate"
+TextButton14.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextButton14.TextSize = 14.000
+
+Hider.Name = "Hider"
+Hider.Parent = TextGui
+Hider.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Hider.BackgroundTransparency = 1.000
+Hider.BorderSizePixel = 0
+Hider.Position = UDim2.new(0.00977198686, 0, 5.14285707, 0)
+Hider.Size = UDim2.new(0, 97, 0, 22)
+Hider.Font = Enum.Font.Ubuntu
+Hider.Text = "Press L To Hide"
+Hider.TextColor3 = Color3.fromRGB(0, 0, 0)
+Hider.TextSize = 14.000
+
+EmployeeESP.Name = "EmployeeESP"
+EmployeeESP.Parent = TextGui
+EmployeeESP.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+EmployeeESP.Position = UDim2.new(0.719869733, 0, 1.82857144, 0)
+EmployeeESP.Size = UDim2.new(0, 86, 0, 29)
+EmployeeESP.Font = Enum.Font.Arial
+EmployeeESP.Text = "EmployeeESP"
+EmployeeESP.TextColor3 = Color3.fromRGB(0, 0, 0)
+EmployeeESP.TextSize = 14.000
+
+ShowTime.Name = "ShowTime"
+ShowTime.Parent = TextGui
+ShowTime.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ShowTime.Position = UDim2.new(0.719869733, 0, 4.31428576, 0)
+ShowTime.Size = UDim2.new(0, 86, 0, 29)
+ShowTime.Font = Enum.Font.Arial
+ShowTime.Text = "0"
+ShowTime.TextColor3 = Color3.fromRGB(0, 0, 0)
+ShowTime.TextSize = 14.000
+
+TextLabel.Name = "&*(!#"
+TextLabel.Parent = TextGui
+TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.BackgroundTransparency = 1.000
+TextLabel.Position = UDim2.new(0.719869733, 0, 5.14285707, 0)
+TextLabel.Size = UDim2.new(0, 86, 0, 22)
+TextLabel.Font = Enum.Font.Arial
+TextLabel.Text = "Time"
+TextLabel.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel.TextSize = 22.000
+
+-- Scripts:
+
+local function ZWCB_fake_script() -- TextGui.Drag 
+	local script = Instance.new('LocalScript', TextGui)
+
+	local UIS = game:GetService('UserInputService')
+	
+	local frame = script.Parent
+	
+	
+	
+	local dragToggle = nil
+	
+	local dragSpeed = 0.25
+	
+	local dragStart = nil
+	
+	local startPos = nil
+	
+	
+	
+	local function updateInput(input)
+	
+		local delta = input.Position - dragStart
+	
+		local position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X,
+	
+			startPos.Y.Scale, startPos.Y.Offset + delta.Y)
+	
+		game:GetService('TweenService'):Create(frame, TweenInfo.new(dragSpeed), {Position = position}):Play()
+	
+	end
+	
+	
+	
+	frame.InputBegan:Connect(function(input)
+	
+		if (input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch) then 
+	
+			dragToggle = true
+	
+			dragStart = input.Position
+	
+			startPos = frame.Position
+	
+			input.Changed:Connect(function()
+	
+				if input.UserInputState == Enum.UserInputState.End then
+	
+					dragToggle = false
+	
+				end
+	
+			end)
+	
+		end
+	
+	end)
+	
+	
+	
+	UIS.InputChanged:Connect(function(input)
+	
+		if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+	
+			if dragToggle then
+	
+				updateInput(input)
+	
+			end
+	
+		end
+	
+	end)
+end
+coroutine.wrap(ZWCB_fake_script)()
+local function WVUR_fake_script() -- TextGui.LocalScript(2) 
+	local script = Instance.new('LocalScript', TextGui)
+
+	local Mod_Menu = script.Parent
+	local TextButton2 = Mod_Menu.TextButton2
+	
+	TextButton2.MouseButton1Up:Connect(function()
+		for i,v in pairs(game.Workspace.GameObjects.Physical.Map:GetDescendants()) do
+			if v.Name == 'BillboardGui' then
+				v:Destroy()
+			end
+		end
+	end)
+	
+	TextButton2.MouseButton1Up:Connect(function()
+		for i,v in pairs(game.Workspace.GameObjects.Physical.Items:GetDescendants()) do
+			if v.Name == 'BillboardGui' then
+				v:Destroy()
+			end
+		end
+	end)
+end
+coroutine.wrap(WVUR_fake_script)()
+local function MQBA_fake_script() -- TextGui.LocalScript(3) 
+	local script = Instance.new('LocalScript', TextGui)
+
+	local Mod_Menu = script.Parent
+	local TextButton3 = Mod_Menu.TextButton3
+	
+	TextButton3.MouseButton1Up:Connect(function()
+		for i,v in pairs(game.Workspace.GameObjects:GetDescendants()) do
+			if v.Parent.Name == 'cafe1' then
+	
+				local BillboardGui = Instance.new('BillboardGui') -- Makes Billboardgui
+				local TextLabel = Instance.new('TextLabel') -- makes text label
+	
+				BillboardGui.Parent = v.Parent -- what the billboardgui goes into
+				BillboardGui.AlwaysOnTop = true -- if its on top or not
+				BillboardGui.Size = UDim2.new(0, 20, 0, 20) -- size of it
+				BillboardGui.StudsOffset = Vector3.new(0,2,0)
+				BillboardGui.MaxDistance = 300
+	
+				TextLabel.Parent = BillboardGui -- putting textlabel into billboardgui
+				TextLabel.BackgroundTransparency = 1 -- transparency
+				TextLabel.Size = UDim2.new(2, 5, 2, 5) -- size
+				TextLabel.Text = "cafe1" -- what the label says
+				TextLabel.TextColor3 = Color3.new(1, 0.333333, 0) -- color
+				TextLabel.TextScaled = false -- if the text is scaled or not
+	
+			end
+		end
+	
+	end)
+end
+coroutine.wrap(MQBA_fake_script)()
+local function BQXJY_fake_script() -- TextGui.LocalScript(5) 
+	local script = Instance.new('LocalScript', TextGui)
+
+	local Mod_Menu = script.Parent
+	local TextButton5 = Mod_Menu.TextButton5
+	
+	TextButton5.MouseButton1Up:Connect(function()
+		for i,v in pairs(game.Workspace.GameObjects:GetDescendants()) do
+			if v.Parent.Name == 'Medkit' then
+	
+				local BillboardGui = Instance.new('BillboardGui') -- Makes Billboardgui
+				local TextLabel = Instance.new('TextLabel') -- makes text label
+	
+				BillboardGui.Parent = v.Parent -- what the billboardgui goes into
+				BillboardGui.AlwaysOnTop = true -- if its on top or not
+				BillboardGui.Size = UDim2.new(0, 20, 0, 20) -- size of it
+				BillboardGui.StudsOffset = Vector3.new(0,2,0)
+				BillboardGui.MaxDistance = 300
+	
+				TextLabel.Parent = BillboardGui -- putting textlabel into billboardgui
+				TextLabel.BackgroundTransparency = 1 -- transparency
+				TextLabel.Size = UDim2.new(2, 5, 2, 5) -- size
+				TextLabel.Text = "MedKit" -- what the label says
+				TextLabel.TextColor3 = Color3.new(1, 0, 0) -- color
+				TextLabel.TextScaled = false -- if the text is scaled or not
+	
+			end
+		end
+	
+	end)
+end
+coroutine.wrap(BQXJY_fake_script)()
+local function BQUTJK_fake_script() -- TextGui.LocalScript(4) 
+	local script = Instance.new('LocalScript', TextGui)
+
+	local Mod_Menu = script.Parent
+	local TextButton4 = Mod_Menu.TextButton4
+	
+	TextButton4.MouseButton1Up:Connect(function()
+		for i,v in pairs(game.Workspace.GameObjects:GetDescendants()) do
+			if v.Parent.Name == 'Water' then
+	
+				local BillboardGui = Instance.new('BillboardGui') -- Makes Billboardgui
+				local TextLabel = Instance.new('TextLabel') -- makes text label
+	
+				BillboardGui.Parent = v.Parent -- what the billboardgui goes into
+				BillboardGui.AlwaysOnTop = true -- if its on top or not
+				BillboardGui.Size = UDim2.new(0, 25, 0, 25) -- size of it
+				BillboardGui.StudsOffset = Vector3.new(0,2,0)
+	
+				TextLabel.Parent = BillboardGui -- putting textlabel into billboardgui
+				TextLabel.BackgroundTransparency = 1 -- transparency
+				TextLabel.Size = UDim2.new(2, 5, 2, 5) -- size
+				TextLabel.Text = "Air" -- what the label says
+				TextLabel.TextColor3 = Color3.new(0.807843, 0.564706, 0.435294) -- color
+				TextLabel.TextScaled = false -- if the text is scaled or not
+	
+			end
+		end
+	
+	end)
+end
+coroutine.wrap(BQUTJK_fake_script)()
+local function OEDU_fake_script() -- TextGui.LocalScript(6) 
+	local script = Instance.new('LocalScript', TextGui)
+
+	local Mod_Menu = script.Parent
+	local TextButton6 = Mod_Menu.TextButton6
+	
+	TextButton6.MouseButton1Up:Connect(function()
+		for i,v in pairs(game.Workspace.GameObjects:GetDescendants()) do
+			if v.Parent.Name == 'Apple' then
+	
+				local BillboardGui = Instance.new('BillboardGui') -- Makes Billboardgui
+				local TextLabel = Instance.new('TextLabel') -- makes text label
+	
+				BillboardGui.Parent = v.Parent -- what the billboardgui goes into
+				BillboardGui.AlwaysOnTop = true -- if its on top or not
+				BillboardGui.Size = UDim2.new(0, 25, 0, 25) -- size of it
+				BillboardGui.StudsOffset = Vector3.new(0,2,0)
+	
+				TextLabel.Parent = BillboardGui -- putting textlabel into billboardgui
+				TextLabel.BackgroundTransparency = 1 -- transparency
+				TextLabel.Size = UDim2.new(2, 5, 2, 5) -- size
+				TextLabel.Text = "Apple" -- what the label says
+				TextLabel.TextColor3 = Color3.new(1, 0.333333, 0.333333) -- color
+				TextLabel.TextScaled = false -- if the text is scaled or not
+	
+			end
+		end
+	
+	end)
+end
+coroutine.wrap(OEDU_fake_script)()
+local function HBBZ_fake_script() -- TextGui.LocalScript 
+	local script = Instance.new('LocalScript', TextGui)
+
+	local Mod_Menu = script.Parent
+	local TextButton = Mod_Menu.TextButton
+	
+	TextButton.MouseButton1Up:Connect(function()
+		for i,v in pairs(game.Workspace.GameObjects:GetDescendants()) do
+			if v.Parent.Name == 'GameCube' then
+	
+				local BillboardGui = Instance.new('BillboardGui') -- Makes Billboardgui
+				local TextLabel = Instance.new('TextLabel') -- makes text label
+	
+				BillboardGui.Parent = v.Parent -- what the billboardgui goes into
+				BillboardGui.AlwaysOnTop = true -- if its on top or not
+				BillboardGui.Size = UDim2.new(0, 25, 0, 25) -- size of it
+				BillboardGui.StudsOffset = Vector3.new(0,2,0)
+	
+				TextLabel.Parent = BillboardGui -- putting textlabel into billboardgui
+				TextLabel.BackgroundTransparency = 1 -- transparency
+				TextLabel.Size = UDim2.new(2, 5, 2, 5) -- size
+				TextLabel.Text = "GameCube" -- what the label says
+				TextLabel.TextColor3 = Color3.new(0.835294, 0, 1) -- color
+				TextLabel.TextScaled = false -- if the text is scaled or not
+	
+			end
+		end
+	
+	end)
+end
+coroutine.wrap(HBBZ_fake_script)()
+local function RKWCAWJ_fake_script() -- TextGui.LocalScript(7) 
+	local script = Instance.new('LocalScript', TextGui)
+
+	local Mod_Menu = script.Parent
+	local TextButton7 = Mod_Menu.TextButton7
+	
+	TextButton7.MouseButton1Up:Connect(function()
+		for i,v in pairs(game.Workspace.GameObjects:GetDescendants()) do
+			if v.Parent.Name == 'Lemon' then
+	
+				local BillboardGui = Instance.new('BillboardGui') -- Makes Billboardgui
+				local TextLabel = Instance.new('TextLabel') -- makes text label
+	
+				BillboardGui.Parent = v.Parent -- what the billboardgui goes into
+				BillboardGui.AlwaysOnTop = true -- if its on top or not
+				BillboardGui.Size = UDim2.new(0, 50, 0, 50) -- size of it
+				BillboardGui.StudsOffset = Vector3.new(0,2,0)
+				BillboardGui.MaxDistance = 300
+	
+				TextLabel.Parent = BillboardGui -- putting textlabel into billboardgui
+				TextLabel.BackgroundTransparency = 1 -- transparency
+				TextLabel.Size = UDim2.new(2, 5, 2, 5) -- size
+				TextLabel.Text = "Lemon" -- what the label says
+				TextLabel.TextColor3 = Color3.new(0.6, 0.6, 0) -- color
+				TextLabel.TextScaled = false -- if the text is scaled or not
+	
+			end
+		end
+	
+	end)
+end
+coroutine.wrap(RKWCAWJ_fake_script)()
+local function ANLDTK_fake_script() -- TextGui.LocalScript(8) 
+	local script = Instance.new('LocalScript', TextGui)
+
+	local Mod_Menu = script.Parent
+	local TextButton8 = Mod_Menu.TextButton8
+	
+	TextButton8.MouseButton1Up:Connect(function()
+		for i,v in pairs(game.Workspace.GameObjects:GetDescendants()) do
+			if v.Parent.Name == 'Burger' then
+	
+				local BillboardGui = Instance.new('BillboardGui') -- Makes Billboardgui
+				local TextLabel = Instance.new('TextLabel') -- makes text label
+	
+				BillboardGui.Parent = v.Parent -- what the billboardgui goes into
+				BillboardGui.AlwaysOnTop = true -- if its on top or not
+				BillboardGui.Size = UDim2.new(0, 25, 0, 25) -- size of it
+				BillboardGui.StudsOffset = Vector3.new(0,2,0)
+	
+				TextLabel.Parent = BillboardGui -- putting textlabel into billboardgui
+				TextLabel.BackgroundTransparency = 1 -- transparency
+				TextLabel.Size = UDim2.new(2, 5, 2, 5) -- size
+				TextLabel.Text = "Burger" -- what the label says
+				TextLabel.TextColor3 = Color3.new(0.713725, 0.376471, 0.152941) -- color
+				TextLabel.TextScaled = false -- if the text is scaled or not
+	
+			end
+		end
+	
+	end)
+end
+coroutine.wrap(ANLDTK_fake_script)()
+local function SLGARXU_fake_script() -- TextGui.LocalScript(9) 
+	local script = Instance.new('LocalScript', TextGui)
+
+	local Mod_Menu = script.Parent
+	local TextButton9 = Mod_Menu.TextButton9
+	
+	TextButton9.MouseButton1Up:Connect(function()
+		for i,v in pairs(game.Workspace.GameObjects:GetDescendants()) do
+			if v.Parent.Name == 'Banana' then
+	
+				local BillboardGui = Instance.new('BillboardGui') -- Makes Billboardgui
+				local TextLabel = Instance.new('TextLabel') -- makes text label
+	
+				BillboardGui.Parent = v.Parent -- what the billboardgui goes into
+				BillboardGui.AlwaysOnTop = true -- if its on top or not
+				BillboardGui.Size = UDim2.new(0, 25, 0, 25) -- size of it
+				BillboardGui.StudsOffset = Vector3.new(0,2,0)
+	
+				TextLabel.Parent = BillboardGui -- putting textlabel into billboardgui
+				TextLabel.BackgroundTransparency = 1 -- transparency
+				TextLabel.Size = UDim2.new(2, 5, 2, 5) -- size
+				TextLabel.Text = "Banana" -- what the label says
+				TextLabel.TextColor3 = Color3.new(0.721569, 0.721569, 0.356863) -- color
+				TextLabel.TextScaled = false -- if the text is scaled or not
+	
+			end
+		end
+	
+	end)
+end
+coroutine.wrap(SLGARXU_fake_script)()
+local function QQYB_fake_script() -- TextGui.LocalScript(10) 
+	local script = Instance.new('LocalScript', TextGui)
+
+	local Mod_Menu = script.Parent
+	local TextButton10 = Mod_Menu.TextButton10
+	
+	TextButton10.MouseButton1Up:Connect(function()
+		for i,v in pairs(game.Workspace.GameObjects:GetDescendants()) do
+			if v.Parent.Name == 'Hotdog' then
+	
+				local BillboardGui = Instance.new('BillboardGui') -- Makes Billboardgui
+				local TextLabel = Instance.new('TextLabel') -- makes text label
+	
+				BillboardGui.Parent = v.Parent -- what the billboardgui goes into
+				BillboardGui.AlwaysOnTop = true -- if its on top or not
+				BillboardGui.Size = UDim2.new(0, 25, 0, 25) -- size of it
+				BillboardGui.StudsOffset = Vector3.new(0,2,0)
+	
+				TextLabel.Parent = BillboardGui -- putting textlabel into billboardgui
+				TextLabel.BackgroundTransparency = 1 -- transparency
+				TextLabel.Size = UDim2.new(2, 5, 2, 5) -- size
+				TextLabel.Text = "HotDog" -- what the label says
+				TextLabel.TextColor3 = Color3.new(1, 0.333333, 0) -- color
+				TextLabel.TextScaled = false -- if the text is scaled or not
+	
+			end
+		end
+	
+	end)
+end
+coroutine.wrap(QQYB_fake_script)()
+local function LONNNYM_fake_script() -- TextGui.LocalScript(11) 
+	local script = Instance.new('LocalScript', TextGui)
+
+	local Mod_Menu = script.Parent
+	local TextButton11 = Mod_Menu.TextButton11
+	
+	TextButton11.MouseButton1Up:Connect(function()
+		for i,v in pairs(game.Workspace.GameObjects:GetDescendants()) do
+			if v.Parent.Name == 'Pizza' then
+	
+				local BillboardGui = Instance.new('BillboardGui') -- Makes Billboardgui
+				local TextLabel = Instance.new('TextLabel') -- makes text label
+	
+				BillboardGui.Parent = v.Parent -- what the billboardgui goes into
+				BillboardGui.AlwaysOnTop = true -- if its on top or not
+				BillboardGui.Size = UDim2.new(0, 25, 0, 25) -- size of it
+				BillboardGui.StudsOffset = Vector3.new(0,2,0)
+	
+				TextLabel.Parent = BillboardGui -- putting textlabel into billboardgui
+				TextLabel.BackgroundTransparency = 1 -- transparency
+				TextLabel.Size = UDim2.new(2, 5, 2, 5) -- size
+				TextLabel.Text = "Pizza" -- what the label says
+				TextLabel.TextColor3 = Color3.new(1, 1, 1) -- color
+				TextLabel.TextScaled = false -- if the text is scaled or not
+	
+			end
+		end
+	
+	end)
+end
+coroutine.wrap(LONNNYM_fake_script)()
+local function MWBSJAA_fake_script() -- TextGui.LocalScript(12) 
+	local script = Instance.new('LocalScript', TextGui)
+
+	local Mod_Menu = script.Parent
+	local TextButton12 = Mod_Menu.TextButton12
+	
+	TextButton12.MouseButton1Up:Connect(function()
+		for i,v in pairs(game.Workspace.GameObjects:GetDescendants()) do
+			if v.Parent.Name == 'Chips' then
+	
+				local BillboardGui = Instance.new('BillboardGui') -- Makes Billboardgui
+				local TextLabel = Instance.new('TextLabel') -- makes text label
+	
+				BillboardGui.Parent = v.Parent -- what the billboardgui goes into
+				BillboardGui.AlwaysOnTop = true -- if its on top or not
+				BillboardGui.Size = UDim2.new(0, 50, 0, 50) -- size of it
+				BillboardGui.StudsOffset = Vector3.new(0,2,0)
+				BillboardGui.MaxDistance = 300
+	
+				TextLabel.Parent = BillboardGui -- putting textlabel into billboardgui
+				TextLabel.BackgroundTransparency = 1 -- transparency
+				TextLabel.Size = UDim2.new(2, 5, 2, 5) -- size
+				TextLabel.Text = "Chips" -- what the label says
+				TextLabel.TextColor3 = Color3.new(1, 0.666667, 0.498039) -- color
+				TextLabel.TextScaled = false -- if the text is scaled or not
+	
+			end
+		end
+	
+	end)
+end
+coroutine.wrap(MWBSJAA_fake_script)()
+local function IYGNVP_fake_script() -- TextGui.LocalScript(13) 
+	local script = Instance.new('LocalScript', TextGui)
+
+	local Mod_Menu = script.Parent
+	local TextButton13 = Mod_Menu.TextButton13
+	
+	TextButton13.MouseButton1Up:Connect(function()
+		for i,v in pairs(game.Workspace.GameObjects:GetDescendants()) do
+			if v.Parent.Name == 'Ice Cream' then
+	
+				local BillboardGui = Instance.new('BillboardGui') -- Makes Billboardgui
+				local TextLabel = Instance.new('TextLabel') -- makes text label
+	
+				BillboardGui.Parent = v.Parent -- what the billboardgui goes into
+				BillboardGui.AlwaysOnTop = true -- if its on top or not
+				BillboardGui.Size = UDim2.new(0, 50, 0, 50) -- size of it
+				BillboardGui.StudsOffset = Vector3.new(0,2,0)
+				BillboardGui.MaxDistance = 300
+	
+				TextLabel.Parent = BillboardGui -- putting textlabel into billboardgui
+				TextLabel.BackgroundTransparency = 1 -- transparency
+				TextLabel.Size = UDim2.new(2, 5, 2, 5) -- size
+				TextLabel.Text = "Ice Cream" -- what the label says
+				TextLabel.TextColor3 = Color3.new(0.333333, 1, 0.498039) -- color
+				TextLabel.TextScaled = false -- if the text is scaled or not
+	
+			end
+		end
+	
+	end)
+end
+coroutine.wrap(IYGNVP_fake_script)()
+local function AGIEDW_fake_script() -- TextGui.LocalScript(14) 
+	local script = Instance.new('LocalScript', TextGui)
+
+	local Mod_Menu = script.Parent
+	local TextButton14 = Mod_Menu.TextButton14
+	
+	TextButton14.MouseButton1Up:Connect(function()
+		for i,v in pairs(game.Workspace.GameObjects:GetDescendants()) do
+			if v.Parent.Name == 'Chocolate' then
+	
+				local BillboardGui = Instance.new('BillboardGui') -- Makes Billboardgui
+				local TextLabel = Instance.new('TextLabel') -- makes text label
+	
+				BillboardGui.Parent = v.Parent -- what the billboardgui goes into
+				BillboardGui.AlwaysOnTop = true -- if its on top or not
+				BillboardGui.Size = UDim2.new(0, 50, 0, 50) -- size of it
+				BillboardGui.StudsOffset = Vector3.new(0,2,0)
+	
+				TextLabel.Parent = BillboardGui -- putting textlabel into billboardgui
+				TextLabel.BackgroundTransparency = 1 -- transparency
+				TextLabel.Size = UDim2.new(2, 5, 2, 5) -- size
+				TextLabel.Text = "Chocolate" -- what the label says
+				TextLabel.TextColor3 = Color3.new(0.333333, 1, 1) -- color
+				TextLabel.TextScaled = false -- if the text is scaled or not
+	
+			end
+		end
+	
+	end)
+end
+coroutine.wrap(AGIEDW_fake_script)()
+local function AFLF_fake_script() -- Hider.LocalScript 
+	local script = Instance.new('LocalScript', Hider)
+
+	local userInputService = game:GetService("UserInputService")
+	
+	userInputService.InputBegan:Connect(function(input,GPE)
+		if input.KeyCode == Enum.KeyCode.L then
+			script.Parent.Parent.Parent.TextGui.Visible = not(script.Parent.Parent.Parent.TextGui.Visible)
+		end
+	end)
+end
+coroutine.wrap(AFLF_fake_script)()
+local function JVYHAV_fake_script() -- TextGui.Emplo 
+	local script = Instance.new('LocalScript', TextGui)
+
+	local Mod_Menu = script.Parent
+	local EmployeeESP = Mod_Menu.EmployeeESP
+	
+	EmployeeESP.MouseButton1Up:Connect(function()
+		repeat
+			wait(10)
+			for i,v in pairs(game.Workspace.GameObjects.Physical.Employees:GetDescendants()) do
+				if v.Name == 'BillboardGui' then
+					v:Destroy()
+				end
+			end
+			wait(0.1)
+			for i,v in pairs(game.Workspace.GameObjects.Physical.Employees:GetDescendants()) do
+				if v.Parent.Name == 'HumanoidRootPart' then
+					local BillboardGui = Instance.new('BillboardGui') -- Makes Billboardgui
+					local TextLabel = Instance.new('TextLabel') -- makes text label
+	
+					BillboardGui.Parent = v.Parent -- what the billboardgui goes into
+					BillboardGui.AlwaysOnTop = true -- if its on top or not
+					BillboardGui.Size = UDim2.new(0, 50, 0, 50) -- size of it
+					BillboardGui.StudsOffset = Vector3.new(0,2,0)
+					BillboardGui.MaxDistance = 265
+	
+					TextLabel.Parent = BillboardGui -- putting textlabel into billboardgui
+					TextLabel.BackgroundTransparency = 1 -- transparency
+					TextLabel.Size = UDim2.new(1, 5, 1, 5) -- size
+					TextLabel.Text = v.Parent.Parent.Name -- what the label says
+					TextLabel.TextColor3 = Color3.new(1, 0, 0) -- color
+					TextLabel.TextScaled = false -- if the text is scaled or not
+				end
+			end
+		until game.Workspace.Camera.FieldOfView == 1
+	end)
+	
+end
+coroutine.wrap(JVYHAV_fake_script)()
+local function ZPEVWM_fake_script() -- TextGui.TimeShow 
+	local script = Instance.new('LocalScript', TextGui)
+
+	local Time = game.ReplicatedStorage.PublicValues.StateLength
+	local GUI = script.Parent
+	local Active = false
+	local Player = nil
+	local NewGui = nil
+	
+	Time.TimeTilChange.Changed:Connect(function(NewValue)
+		GUI.ShowTime.Text = tostring(NewValue)
+	end)
+end
+coroutine.wrap(ZPEVWM_fake_script)()
