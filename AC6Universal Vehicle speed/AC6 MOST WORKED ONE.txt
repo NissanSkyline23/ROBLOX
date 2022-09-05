@@ -1,0 +1,113 @@
+game:GetService("StarterGui"):SetCore("SendNotification", {
+Title = "AC6 Speed Exploit",
+Text = "Created by shawnjbragdon#0001",
+})
+
+local ActivateSpeedKeybind = Enum.KeyCode.V
+local FlyingKeybind = Enum.KeyCode.H
+local TeleportKeybind = Enum.KeyCode.N
+
+if game.PlaceId == 6911148748 then
+ActivateSpeedKeybind = Enum.KeyCode.V
+FlyingKeybind = Enum.KeyCode.H
+TeleportKeybind = Enum.KeyCode.N
+game:GetService("StarterGui"):SetCore("SendNotification", {
+Title = "AC6 Speed Exploit",
+Text = "The controls have been overrided due to game controls overriding default.",
+})
+end
+
+-- T | Teleport to Mouse.
+-- F & Hold | Apply up-wards velocity.
+-- LeftShift & Hold | Speed exploit.
+-- 1 | Break vehicle velocity.
+
+local Players = game:GetService("Players")
+local RunService = game:GetService("RunService")
+local UserInputService = game:GetService("UserInputService")
+local TweenService = game:GetService("TweenService")
+
+local LocalPlayer = Players.LocalPlayer
+local Character = LocalPlayer.Character
+local Humanoid = Character:FindFirstChildWhichIsA("Humanoid")
+
+local SeatPart = Humanoid.SeatPart
+local Vehicle = SeatPart.Parent
+local Wheels = Vehicle:FindFirstChild("Wheels")
+local Body = Vehicle:FindFirstChild("Body")
+
+if SeatPart:FindFirstAncestor("Body") then
+Vehicle = SeatPart:FindFirstAncestor("Body").Parent
+Wheels = (Wheels ~= nil and Wheels) or Vehicle:FindFirstChild("Wheels")
+end
+
+if game.PlaceId == 6911148748 then
+Wheels = Vehicle:FindFirstChild("Core")
+end
+
+Vehicle.PrimaryPart = SeatPart
+
+local function GetWheelVelocity()
+if game.PlaceId == 6911148748 then
+return Wheels:GetChildren()[1]["Wheel"].Velocity, Wheels:GetChildren()[1]["Wheel"].RotVelocity
+end
+for index, value in pairs(Wheels:GetDescendants()) do
+if value:IsA("BasePart") then
+return value.Velocity, value.RotVelocity
+end
+end
+end
+
+local function SetWheelVelocity(Velocity, RotVelocity)
+for index, value in pairs(Wheels:GetDescendants()) do
+pcall(function()
+value.Velocity = Velocity
+if RotVelocity ~= nil then
+value.RotVelocity = RotVelocity
+end
+end)
+end
+end
+
+InputBegan = UserInputService.InputBegan:Connect(function(inputObject, gameProcessedEvent)
+if gameProcessedEvent then
+return
+end
+if inputObject.KeyCode == TeleportKeybind then
+if not LocalPlayer:GetMouse().Target then
+return
+end
+Character.Parent = Vehicle
+Vehicle:MoveTo(LocalPlayer:GetMouse().Hit.Position + Vector3.new(0, 4, 0))
+Character.Parent = workspace
+elseif inputObject.KeyCode == Enum.KeyCode.One then
+for index, value in pairs(Vehicle:GetDescendants()) do
+if value:IsA("BasePart") then
+TweenService:Create(value, TweenInfo.new(0.3), {
+Velocity = Vector3.new(0, 0, 0),
+RotVelocity = Vector3.new(0, 0, 0),
+}):Play()
+end
+end
+end
+end)
+
+Connection = RunService.Stepped:Connect(function()
+-- \\ Speed is using MPH equation.
+local Speed = ((10/12) * (60/88)) * SeatPart.Velocity.Magnitude
+if not Vehicle or not Vehicle.Parent or not Humanoid.SeatPart then
+game:GetService("StarterGui"):SetCoreGuiEnabled(Enum.CoreGuiType.All, true)
+Connection:Disconnect()
+InputBegan:Disconnect()
+return
+else
+game:GetService("StarterGui"):SetCoreGuiEnabled(Enum.CoreGuiType.Backpack, false)
+local WheelVelocity, WheelRotVelocity = GetWheelVelocity()
+if UserInputService:IsKeyDown(ActivateSpeedKeybind) then
+if Speed > 210 then
+return
+end
+SetWheelVelocity(WheelVelocity * Vector3.new(1.1, 1, 1.1))
+end
+end
+end)
