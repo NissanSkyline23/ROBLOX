@@ -1,0 +1,29 @@
+print("Sprint Script Loaded")
+-- You must put this in a local script because it's handling user input
+-- This script should go in StarterPlayer > StarterCharacterScripts
+
+-- We can only access LocalPlayer in a LocalScript it cannot be accessed in a server script nor ModuleScript
+
+player = game.Players.LocalPlayer
+
+mouse = player:GetMouse() -- This is what will be detecting if you pressed a key
+
+ -- Here we create a function with a parameter 'key' key is the key that was pressed
+
+local function onKeyDown(key)
+-- This checks to see if the key code is the same as shift
+if string.byte(key) == 120 then -- 48 is the keycode to shift 
+player.Character.Humanoid.WalkSpeed = 65 -- This is changing the persons walkspeed
+end
+end
+
+local function onKeyUp(key) -- a function going to be fired when a key is released
+if string.byte(key) == 120 then -- Again here we check to see if it's the shift key
+player.Character.Humanoid.WalkSpeed = 16 -- Here we are changing the walkspeed back to default which is 16
+end
+end
+
+-- Here we are connecting the two functions to the 'KeyDown' and 'KeyUp' events.
+
+mouse.KeyDown:connect(onKeyDown)
+mouse.KeyUp:connect(onKeyUp)

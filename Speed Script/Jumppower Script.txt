@@ -1,0 +1,6 @@
+_G.JP = "Enter Speed Here";
+				local Humanoid = game:GetService("Players").LocalPlayer.Character.Humanoid;
+				Humanoid:GetPropertyChangedSignal("JumpPower"):Connect(function()
+				Humanoid.JumpPower = _G.JP;
+				end)
+				Humanoid.JumpPower = _G.JP;
